@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cek khodam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="id">
+        <div class="dalam">
+            <h1 class="judul">CEK KHODAM "by hamdani"</h1>
+        </div>
+        <div class="contener">
+            <div class="bagron">
+
+                <div class="yolo">
+                    <label for="pw" class="label">KETIK NAMA ANDA</label>
+                    <p class="pading">
+                        <input type="text" class="input" id="nama" placeholder="Nama......" />
+                    </p>
+                    <p class="pading1">
+                        <button class="btn" onclick="btn()">CEK</button>
+                    </p>
+                    <p id="p" class="isi"></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        const nama = document.getElementById("nama")
+        const khodam = [
+            'mie ayam',
+            'ayam bakar',
+            'sate kambing',
+            'pecel lele', 'ayam penyet', 'babi guling',
+            "Singa sirkus", "Jerapah ", "Gajah duduk", "Harimau ngantuk", "Kuda kepang", "Kucing oyen", "Anjing kau", "Burung mu", "Ular sawah", "Kura-kura ninja",
+            "Apel newton", "Pisang melengkung", "Mangga matang", "peng Anggur an",
+            "Sapi qurban", "Kambing guling", "Ayam geprek", "Bebek kaleo", "Ikan gabus", "Belut listrik", "Kepiting mr. kraab", "Katak london", "Kuda nil", "Lumba-lumba",
+            "Pesawat kertas", "Kapal malik", "Motor listrik", "Truk oleng", "Bus telolet", "Kereta api", "Sepatu roda", "tuyul bertopi",
+            "Kupu-kupu", "Laba-laba", "Kecoak", "Lebah", "Capung", "Kadal", "Cicak", "Kelelawar", "Burung hantu",
+            "Kelinci", "Hamster", "Landak", "Sugar glider", "Marmut", "Musang",
+        ]
+
+        function btn() {
+
+            const randomIndex = Math.floor(Math.random() * khodam.length);
+            const ambil = khodam[randomIndex]
+            document.getElementById("p").textContent = `${nama.value} khodam yang kamu miliki adalah  ${ambil}`;
+            if (nama.value == "erik") {
+                ambil == "pecel lele"
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
